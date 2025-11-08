@@ -15,3 +15,10 @@ func Goodbye(name string) string {
 	}
 	return fmt.Sprintf("Goodbye, %s!", name)
 }
+
+func Plus(a, b int) int {
+	return a + b
+}
+func Minus(a, b int) int {
+	return a - b
+}
