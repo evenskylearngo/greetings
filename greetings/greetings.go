@@ -1,12 +1,15 @@
 package greetings
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
-func Hello(name string) string {
+func Hello(name string) (string, error) {
 	if name == "" {
-		name = "World"
+		return "", errors.New("empty name")
 	}
-	return fmt.Sprintf("Hello, %s!", name)
+	return fmt.Sprintf("Hello, %s!", name), nil
 }
 
 func Goodbye(name string) string {
